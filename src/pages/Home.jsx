@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <NavigationBar />
 
-      <div className="flex flex-wrap justify-center mt-5 gap-4">
+      <div className="flex flex-wrap justify-center mt-5 gap-5">
         {books?.books?.map((book) => {
           return <BookCard key={`${book.id} ${book.title}`} {...book} />;
         })}

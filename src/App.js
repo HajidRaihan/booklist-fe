@@ -8,6 +8,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import BookForm from "./components/BookForm";
 import NewBook from "./pages/NewBook";
+import BookCardDetail from "./components/BookCardDetail";
+import BookDetail from "./pages/BookDetail";
+import EditBook from "./pages/EditBook";
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/book" element={<NewBook />} />
+        <Route path="/book/:id" element={<BookDetail />} />
+        <Route path="/book/:id/edit" element={<EditBook />} />
       </Routes>
     </Router>
   );

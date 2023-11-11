@@ -1,5 +1,5 @@
-import React from "react";
-import AuthCard from "../components/Auth/LoginCard";
+import React, { useState } from "react";
+
 import RegisterCard from "../components/Auth/RegisterCard";
 
 const Register = () => {

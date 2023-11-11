@@ -1,9 +1,11 @@
 import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createBook, editBook } from "../modules/fetch";
 
 const BookForm = ({ bookData }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
   async function handleSubmit(event) {
     event.preventDefault();
     if (!selectedImage) {
@@ -21,6 +23,7 @@ const BookForm = ({ bookData }) => {
           parseInt(formData.get("pages"))
         );
         window.alert("success add book");
+        navigate("/");
       } catch (error) {
         console.log(error);
         window.alert("something went wrong");

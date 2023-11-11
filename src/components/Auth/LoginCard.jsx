@@ -27,9 +27,6 @@ const LoginCard = (props) => {
           value={passwordValue}
           onChange={passwordOnChange}
         />
-        <div className="-ml-2.5">
-          <Checkbox label="Remember Me" />
-        </div>
       </CardBody>
       <CardFooter className="pt-0">
         <Button variant="gradient" fullWidth onClick={loginHandler}>

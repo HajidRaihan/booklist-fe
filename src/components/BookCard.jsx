@@ -6,9 +6,10 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const BookCard = ({ id, title, author, image, publisher, year }) => {
+  const navigate = useNavigate();
   return (
     <Card className="mt-6 w-60">
       <CardHeader color="blue-gray" className="relative h-60">
@@ -22,7 +23,7 @@ const BookCard = ({ id, title, author, image, publisher, year }) => {
         <Typography variant="small">Publisher : {publisher}</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Read More</Button>
+        <Button onClick={() => navigate(`/book/${id}`)}>Detail</Button>
       </CardFooter>
     </Card>
   );
